@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AK Events - Luxury Event Rentals in Kasaragod</title>
+    <meta name="description"
+        content="AK Events is a luxury event rental showroom offering fancy chairs, bouffe systems, sofas, coolers, heavy fans and more for your special events." />
+    <meta name="keywords"
+        content="AK Events, event rentals, Kasaragod, luxury event, fancy chairs, bouffe systems, sofas, coolers, heavy fans, Shalimar Sounds" />
+    <meta name="author" content="AK Events" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN with Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FAF9F6',     // Rich taupe (luxurious and warm)
+                        secondary: '#C19A6B',   // Light beige (soft and elegant)
+                        accent: '#B8860B',      // Dark goldenrod (opulent and classic)
+                        neutral: '#111111',     // Charcoal (strong, muted text color)
+                        background: '#FAF9F6',   // Off-white (airy and bright)
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'serif'],
+                        body: ['"Open Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="antialiased text-white font-body bg-neutral">
+    <!-- Header with Logo & Navigation -->
+    <header class="fixed top-0 z-50 w-full text-white shadow bg-gradient-to-r from-primary to-secondary">
+        <div class="flex items-center justify-between p-4 mx-auto max-w-7xl">
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-3">
+                <!-- <img src="https://res.cloudinary.com/dbyvfosqi/image/upload/v1741466445/akevents_logo_thvsi3.jpg" alt="AK Events Logo" class="h-12 " /> -->
+                <span class="text-2xl font-bold font-heading text-accent">AK Events</span>
+            </div>
+            <!-- Desktop Navigation -->
+            <nav class="hidden space-x-8 text-lg md:flex">
+                <a href="#services" class="transition hover:text-accent">Rentals</a>
+                <a href="#partners" class="transition hover:text-accent">Our Partners</a>
+                <a href="#shalimar" class="transition hover:text-accent">Shalimar Sounds</a>
+                <a href="#testimonials" class="transition hover:text-accent">Testimonials</a>
+                <a href="#contact" class="transition hover:text-accent">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="menuBtn" aria-label="Open menu" class="text-2xl md:hidden focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu"
+            class="absolute left-0 flex-col hidden w-full text-center text-white md:hidden top-full bg-gradient-to-r from-primary to-secondary">
+            <a href="#services" class="py-3 transition hover:bg-accent hover:text-neutral">Rentals</a>
+            <a href="#partners" class="py-3 transition hover:bg-accent hover:text-neutral">Our Partners</a>
+            <a href="#shalimar" class="py-3 transition hover:bg-accent hover:text-neutral">Shalimar Sounds</a>
+            <a href="#testimonials" class="py-3 transition hover:bg-accent hover:text-neutral">Testimonials</a>
+            <a href="#contact" class="py-3 transition hover:bg-accent hover:text-neutral">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section with Video Background & Gradient Overlay -->
+    <section id="home" class="relative flex items-center justify-center w-full h-screen overflow-hidden text-center">
+        <video class="absolute top-0 left-0 object-cover w-full h-full -z-10" src="https://res.cloudinary.com/dbyvfosqi/video/upload/v1741467064/lightshow_rny6me.mp4" type="video/mp4"
+            autoplay muted loop playsinline></video>
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-black/70 to-black/90 -z-10">
+        </div>
+        <div class="relative z-10 px-4">
+            <h1 class="mb-4 text-4xl font-bold md:text-6xl font-heading drop-shadow-lg">Welcome to AK Events</h1>
+            <p class="mb-8 text-lg md:text-2xl drop-shadow-md">Elevate Your Events with Our Luxury Rentals in Kasaragod
+            </p>
+            <a href="#contact"
+                class="inline-block px-6 py-3 text-xl font-semibold transition duration-300 rounded shadow-lg bg-accent text-neutral hover:bg-white">Book
+                Now</a>
+        </div>
+        <div class="absolute left-0 w-full text-3xl text-center bottom-6 animate-bounce">
+            <i class="fas fa-chevron-down text-accent"></i>
+        </div>
+    </section>
+
+    <!-- Our Event Rentals / Product Cards Section -->
+    <section id="services" class="py-16 scroll-mt-24">
+        <div class="px-6 mx-auto max-w-7xl">
+            <h2 class="mb-12 text-3xl font-bold text-center md:text-4xl font-heading">Our Event Rentals</h2>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                <!-- Fancy Chairs Card -->
+                <div
+                    class="overflow-hidden transition bg-white border border-transparent rounded-lg shadow-xl group hover:border-accent">
+                    <img src="https://res.cloudinary.com/dbyvfosqi/image/upload/v1741466442/modern_chairs_sgd8ni.jpg"
+                        alt="Fancy Chairs"
+                        class="object-cover w-full h-56 transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-accent">Fancy Chairs</h3>
+                        <p class="mt-2 text-sm text-gray-600">Elegant chairs that add a touch of luxury to your event.
+                        </p>
+                    </div>
+                </div>
+                <!-- Bouffe Systems Card -->
+                <div
+                    class="overflow-hidden transition bg-white border border-transparent rounded-lg shadow-xl group hover:border-accent">
+                    <img src="https://res.cloudinary.com/dbyvfosqi/image/upload/v1741466445/luxury_counters_x8a0jy.jpg"
+                        alt="Bouffe Systems"
+                        class="object-cover w-full h-56 transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-accent">Bouffe Systems</h3>
+                        <p class="mt-2 text-sm text-gray-600">Complete buffet systems designed for style and
+                            functionality.</p>
+                    </div>
+                </div>
+                <!-- Luxury Sofas Card -->
+                <div
+                    class="overflow-hidden transition bg-white border border-transparent rounded-lg shadow-xl group hover:border-accent">
+                    <img src="https://res.cloudinary.com/dbyvfosqi/image/upload/v1741466444/sofa_1_toe4me.jpg"
+                        alt="Luxury Sofas"
+                        class="object-cover w-full h-56 transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-accent">Luxury Sofas</h3>
+                        <p class="mt-2 text-sm text-gray-600">Comfortable and stylish sofas to enhance your event space.
+                        </p>
+                    </div>
+                </div>
+                <!-- Air Coolers Card -->
+                <div
+                    class="overflow-hidden transition bg-white border border-transparent rounded-lg shadow-xl group hover:border-accent">
+                    <img src="https://res.cloudinary.com/dbyvfosqi/image/upload/v1741466716/cooler_ys7pkt.webp"
+                        alt="Air Coolers"
+                        class="object-cover w-full h-56 transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-accent">Air Coolers</h3>
+                        <p class="mt-2 text-sm text-gray-600">Efficient cooling systems to keep your event comfortable.
+                        </p>
+                    </div>
+                </div>
+                <!-- Heavy-Duty Fans Card -->
+                <!-- <div
+                    class="overflow-hidden transition bg-white border border-transparent rounded-lg shadow-xl group hover:border-accent">
+                    <img src="images/fans.jpg" alt="Heavy-Duty Fans"
+                        class="object-cover w-full h-56 transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-accent">Heavy-Duty Fans</h3>
+                        <p class="mt-2 text-sm text-gray-600">Powerful fans designed for large-scale events.</p>
+                    </div>
+                </div> -->
+                <!-- Event Decor & Lighting Card -->
+                <div
+                    class="overflow-hidden transition bg-white border border-transparent rounded-lg shadow-xl group hover:border-accent">
+                    <img src="https://res.cloudinary.com/dbyvfosqi/image/upload/v1741466868/decor_a6oszg.jpg"
+                        alt="Event Decor & Lighting"
+                        class="object-cover w-full h-56 transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-accent">Event Decor & Lighting</h3>
+                        <p class="mt-2 text-sm text-gray-600">Transform your venue with exquisite decor and lighting
+                            solutions.</p>
+                    </div>
+                </div>
+                <div
+                    class="overflow-hidden transition bg-white border border-transparent rounded-lg shadow-xl group hover:border-accent">
+                    <img src="https://res.cloudinary.com/dbyvfosqi/image/upload/v1741466444/washbasing_modern_vrrmwh.jpg"
+                        alt="Premium Wash Basins"
+                        class="object-cover w-full h-56 transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-accent">Premium Wash Basins</h3>
+                        <p class="mt-2 text-sm text-gray-600">Elevate your event with stylish and functional wash
+                            basins.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Partners Section (Logo Area) -->
+    <section id="partners" class="py-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="px-6 mx-auto max-w-7xl">
+            <h2 class="mb-8 text-3xl font-bold text-center md:text-4xl font-heading text-accent">Our Partners</h2>
+            <div class="flex flex-wrap items-center justify-center gap-8">
+                <!-- Replace these with your actual partner logos -->
+                <img src="https://res.cloudinary.com/dbyvfosqi/image/upload/v1741466442/marthaba_log_gli3fz.jpg"
+                    alt="Marthaba" class="h-16" />
+                <img src="https://res.cloudinary.com/dbyvfosqi/image/upload/v1741466442/shalimar_logo_sakpr0.jpg"
+                    alt="Shalimar" class="h-16" />
+                <img src="https://res.cloudinary.com/dbyvfosqi/image/upload/v1741466441/shifa_logo_jgn9rn.jpg"
+                    alt="shifa_logo_jgn9rn" class="h-16" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Shalimar Sounds Collaboration Section with Parallax Effect -->
+    <section id="shalimar" class="relative py-20 bg-fixed bg-center bg-cover scroll-mt-24"
+        style="background-image: url('images/shalimar-bg.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/90"></div>
+        <div class="relative z-10 max-w-5xl px-6 mx-auto text-center">
+            <h2 class="mb-4 text-3xl font-bold md:text-4xl font-heading drop-shadow">Shalimar Sounds</h2>
+            <p class="mb-6 text-xl md:text-2xl drop-shadow">In collaboration with <strong>Shalimar Sounds</strong> of
+                Thalangara, Kasaragod, we deliver premium audio and lighting solutions to elevate your events.</p>
+            <a href="#contact"
+                class="inline-block px-6 py-2 font-semibold transition duration-300 rounded shadow bg-accent text-neutral hover:bg-white">Learn
+                More</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section with Slider -->
+    <section id="testimonials" class="py-16 scroll-mt-24">
+        <div class="max-w-6xl px-6 mx-auto text-center">
+            <h2 class="mb-8 text-3xl font-bold md:text-4xl font-heading">Testimonials</h2>
+            <div class="relative">
+                <!-- Testimonial Slide 1 -->
+                <div class="testimonial-slide">
+                    <p class="mb-4 text-xl italic md:text-2xl">"AK Events transformed our wedding reception with their
+                        elegant rentals and impeccable service. Truly a luxurious experience!"</p>
+                    <span class="font-semibold text-accent">- Aisha, Kasaragod</span>
+                </div>
+                <!-- Testimonial Slide 2 -->
+                <div class="hidden testimonial-slide">
+                    <p class="mb-4 text-xl italic md:text-2xl">"Their cooling solutions and premium décor kept our
+                        guests comfortable and impressed throughout the event."</p>
+                    <span class="font-semibold text-accent">- Rahim, Kannur</span>
+                </div>
+                <!-- Testimonial Slide 3 -->
+                <div class="hidden testimonial-slide">
+                    <p class="mb-4 text-xl italic md:text-2xl">"Partnering with Shalimar Sounds added the perfect
+                        audio-visual touch to our corporate event. Highly recommended!"</p>
+                    <span class="font-semibold text-accent">- Nandini, Mangalore</span>
+                </div>
+                <!-- Slider Controls -->
+                <button id="prevTest" aria-label="Previous testimonial"
+                    class="absolute left-0 w-10 h-10 text-2xl -translate-y-1/2 rounded-full top-1/2 text-accent hover:text-white bg-neutral bg-opacity-30">&#8249;</button>
+                <button id="nextTest" aria-label="Next testimonial"
+                    class="absolute right-0 w-10 h-10 text-2xl -translate-y-1/2 rounded-full top-1/2 text-accent hover:text-white bg-neutral bg-opacity-30">&#8250;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Booking Form Section with Submit Button -->
+    <section id="contact" class="py-16">
+        <div class="max-w-4xl px-6 mx-auto">
+            <h2 class="mb-8 text-3xl font-bold text-center md:text-4xl font-heading">Contact Us</h2>
+            <form action="#" method="POST" class="p-6 space-y-4 bg-white rounded-lg shadow-lg text-neutral">
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                    <input type="text" name="name" placeholder="Your Name" required
+                        class="p-3 border border-gray-300 rounded outline-none focus:ring-2 focus:ring-accent" />
+                    <input type="email" name="email" placeholder="Your Email" required
+                        class="p-3 border border-gray-300 rounded outline-none focus:ring-2 focus:ring-accent" />
+                </div>
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                    <input type="tel" name="phone" placeholder="Phone Number"
+                        class="p-3 border border-gray-300 rounded outline-none focus:ring-2 focus:ring-accent" />
+                    <input type="text" name="subject" placeholder="Event Type/Subject"
+                        class="p-3 border border-gray-300 rounded outline-none focus:ring-2 focus:ring-accent" />
+                </div>
+                <textarea name="message" rows="4" placeholder="Your Message or Event Details"
+                    class="w-full p-3 border border-gray-300 rounded outline-none focus:ring-2 focus:ring-accent"></textarea>
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="w-full px-8 py-3 font-semibold transition duration-300 rounded shadow md:w-auto bg-accent text-neutral hover:bg-white">
+                    Send Message
+                </button>
+            </form>
+            <p class="mt-6 text-center text-gray-300">Or call us at <a href="tel:+91XXXXXXXXXX"
+                    class="font-semibold text-accent hover:underline">+91 XXXXXXXXXX</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-gray-500 bg-primary">
+        <div class="max-w-6xl px-6 mx-auto text-center md:flex md:justify-between md:items-center md:text-left">
+            <div class="mb-6 md:mb-0">
+                <h3 class="mb-2 text-2xl font-bold font-heading text-accent">AK Events</h3>
+                <p>Deli Melparamba, Kasaragod, Kerala - 671121</p>
+                <p>Phone: <a href="tel:+91XXXXXXXXXX" class="transition hover:text-accent">+91 XXXXXXXXXX</a></p>
+                <p>Email: <a href="mailto:info@akevents.com" class="transition hover:text-accent">info@akevents.com</a>
+                </p>
+            </div>
+            <div>
+                <p class="mb-2">Follow us:</p>
+                <div class="space-x-4 text-2xl">
+                    <a href="#" target="_blank" rel="noopener" aria-label="Facebook"
+                        class="transition hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="Instagram"
+                        class="transition hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="Twitter"
+                        class="transition hover:text-white"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-6 text-sm text-center text-gray-500">
+            &copy; 2025 AK Events. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- AI Chatbot Widget -->
+    <div id="chatbot" class="fixed z-50 bottom-4 right-4">
+        <button id="chatbotButton" aria-label="Open chat"
+            class="flex items-center justify-center w-16 h-16 rounded-full shadow-lg bg-accent hover:shadow-xl">
+            <i class="text-2xl fas fa-comments text-neutral"></i>
+        </button>
+        <div id="chatWindow" class="hidden p-4 text-white rounded-lg shadow-xl bg-primary w-80 h-96">
+            <div class="flex items-center justify-between pb-2 mb-2 border-b">
+                <h4 class="font-semibold">Chat with us</h4>
+                <button id="closeChat" aria-label="Close chat"
+                    class="text-xl text-gray-400 hover:text-gray-200">&times;</button>
+            </div>
+            <div class="p-2 mb-2 overflow-y-auto border border-gray-600 h-72">
+                <p class="text-sm text-gray-300">Hello! How can we assist you today?</p>
+            </div>
+            <input type="text" placeholder="Type your message..."
+                class="w-full px-2 py-1 text-white border border-gray-600 rounded bg-secondary" />
+        </div>
+    </div>
+
+    <!-- GSAP & Custom Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+        integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+        integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Testimonial slider functionality
+        const testimonials = document.querySelectorAll('.testimonial-slide');
+        let currentTest = 0;
+        function showTestimonial(index) {
+            testimonials.forEach((el, i) => {
+                el.classList.toggle('hidden', i !== index);
+            });
+        }
+        document.getElementById('prevTest').addEventListener('click', () => {
+            currentTest = (currentTest - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentTest);
+        });
+        document.getElementById('nextTest').addEventListener('click', () => {
+            currentTest = (currentTest + 1) % testimonials.length;
+            showTestimonial(currentTest);
+        });
+        setInterval(() => {
+            currentTest = (currentTest + 1) % testimonials.length;
+            showTestimonial(currentTest);
+        }, 8000);
+
+        // Chatbot open/close functionality
+        const chatbotButton = document.getElementById('chatbotButton');
+        const chatWindow = document.getElementById('chatWindow');
+        const closeChat = document.getElementById('closeChat');
+        chatbotButton.addEventListener('click', () => {
+            chatWindow.classList.remove('hidden');
+        });
+        closeChat.addEventListener('click', () => {
+            chatWindow.classList.add('hidden');
+        });
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from("#home h1", { opacity: 0, y: -50, duration: 1 });
+        gsap.from("#home p", { opacity: 0, y: 50, duration: 1, delay: 0.3 });
+        gsap.from("#home a", { opacity: 0, scale: 0.8, duration: 0.5, delay: 0.6 });
+        gsap.from("#services h2", {
+            scrollTrigger: "#services h2",
+            opacity: 0,
+            y: 50,
+            duration: 1
+        });
+        gsap.from("#partners h2", {
+            scrollTrigger: "#partners h2",
+            opacity: 0,
+            y: 50,
+            duration: 1
+        });
+        gsap.from("#shalimar h2, #shalimar p, #shalimar a", {
+            scrollTrigger: "#shalimar",
+            opacity: 0,
+            y: 50,
+            stagger: 0.2,
+            duration: 1
+        });
+        gsap.from("#testimonials h2", {
+            scrollTrigger: "#testimonials h2",
+            opacity: 0,
+            y: 50,
+            duration: 1
+        });
+        gsap.from("#contact h2", {
+            scrollTrigger: "#contact h2",
+            opacity: 0,
+            y: 50,
+            duration: 1
+        });
+    </script>
+</body>
+
+</html>
